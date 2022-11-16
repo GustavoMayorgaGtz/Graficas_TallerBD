@@ -1,0 +1,19 @@
+# Post http://localhost:3000/User/login
+# Content-Type: application/json
+
+# {
+#   "email":"goglege2@gmail.com",
+#   "password":"password123"
+# }
+
+# Get http://localhost:3000/User/FindAllUsers
+# Content-Type: application/json
+
+Post http://localhost:3000/User/CreateUser
+Content-Type: application/json
+
+{
+  "name":"Gustavo Mayorga Gutierrez",
+  "email":"goglege2@gmail.com",
+  "password":"password123"
+}

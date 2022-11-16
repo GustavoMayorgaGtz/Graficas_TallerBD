@@ -1,0 +1,32 @@
+<div class="body">
+    <div class="left">
+        <div class="option" (click)="selectMenu(0)">Eliminar Usuario</div>
+        <div class="option" (click)="exit()">Salir</div>
+    </div>
+    <div class="right">
+        <div *ngIf="menu == 0" class="dropUser">
+            <div class="eraseLeft">
+                {{messageError}}
+                <div class="etiqueta" *ngFor="let name of listNombre; let i = index">
+                    <div class="nombre">
+                        <b>{{name}}</b>
+                    </div>
+                    <div class="correo">
+                        <b>{{listCorreo[i]}}</b>
+                    </div>
+                    <div class="id">
+                        <b>ID: {{listIds[i]}}</b>
+                    </div>
+                    <div class="x" (click)="dropUser(i)">
+                        <img src="./assets/xrojo.png" alt="eliminar" class="eliminar">
+                    </div>
+                </div>
+            </div>
+            <div class="eraseRight">
+                <span class="titleDrop">Cuidado con los usuarios que elimines, estos no podran recuperarse despues de
+                    borrarlos.</span>
+                <img src="./assets/drop.svg" alt="drop" class="svg">
+            </div>
+        </div>
+    </div>
+</div>

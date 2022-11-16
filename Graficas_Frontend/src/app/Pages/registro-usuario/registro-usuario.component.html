@@ -1,0 +1,23 @@
+
+<div class="body">
+    <div class="form">
+        <form class="left" [formGroup]="form">
+            <div class="Title">Bienvenido a GraphAll!</div>
+            <br>
+            <label for="username">Nombre Completo</label>
+            <input type="text" class="inputForm1" name="username" formControlName="username">
+            <br>
+            <br>
+            <label for="username">Correo Electronico</label>
+            <input type="text" class="inputForm1" name="email" formControlName="email">
+            <br>
+            <label for="password">Contraseña</label>
+            <input type="password" class="inputForm1" name="password" formControlName="password">
+            <br>
+            <input type="button" class="inputForm2" name="submit" value="Registrar!" (click)="Registrar()">
+            
+        </form>
+
+ 
+    </div>
+</div>

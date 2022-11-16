@@ -1,0 +1,20 @@
+
+<div class="body">
+    <div class="form">
+        <form class="left" [formGroup]="form">
+            <div class="image"><img src="./assets/grafico.png" class="icon"></div>
+            <br>
+            <label for="username">Nombre de Usuario</label>
+            <input type="text" class="inputForm1" name="username" formControlName="username">
+            <br>
+            <label for="password">Contraseña </label>
+            <input type="password" class="inputForm1" name="password" formControlName="password">
+            <br>
+            <input type="button" class="inputForm2" name="submit" value="Iniciar Sesion" (click)="Login()">
+            <br>
+            <label class="registrate" (click)="Registrar()">Registrate!</label>
+        </form>
+
+ 
+    </div>
+</div>

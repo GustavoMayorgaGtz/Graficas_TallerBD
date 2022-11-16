@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/*font-family: 'PT Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+/*font-family: 'Mukta', sans-serif;*/
+
+
+
+
+
+/* >700px Dektop*/
+@media (min-width: 700px) {
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        background-color: white;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(242, 242, 242);
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: 100%;
+    }
+
+    .registrate{
+       font-family: 'Mukta', sans-serif;
+       text-decoration: underline;
+       color:blue;
+       font-size: calc(12px + 0.3vw);
+       cursor: pointer;
+    }
+
+    .form {
+        background-color: white;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.131);
+        min-width: 260px;
+        width: 50%;
+        max-width: 500px;
+        height: 60vh;
+        min-height: 500px;
+        max-height: 900px;
+        display: grid;
+        grid-template-columns: 6fr;
+        border-radius: 5px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .right {
+        background-color: rgb(183, 219, 248);
+    }
+
+
+    .left>label {
+        user-select: none;
+        font-family: 'Mukta', sans-serif;
+        font-size: calc(12px + 0.6vw);
+        font-weight: bold;
+    }
+
+    .left>.image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100px + 1vw);
+        height: calc(100px + 1vw);
+        border-radius: 50%;
+        background-color: rgb(241, 241, 241);
+    }
+
+    .left>.image>.icon {
+        user-select: none;
+        width: 60%;
+        height: 60%;
+    }
+
+    .left>.inputForm1 {
+        width: 80%;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: 1px solid rgb(177, 177, 177);
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .left>.inputForm1:focus {
+        outline: none;
+        border: 1px solid rgb(49, 121, 215);
+        transition: all 0.5s;
+    }
+
+    .left>.inputForm2 {
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        min-width: 200px;
+        width: 50%;
+        height: 50px;
+        max-width: 400px;
+        transition: all 0.5s;
+        color: black;
+        background-color: rgb(228, 228, 228);
+    }
+
+    .left>.inputForm2:hover {
+        cursor: pointer;
+        transition: all 0.5s;
+        color: white;
+        background-color: rgb(80, 139, 178);
+    }
+}
+
+/*//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+/* <700px Mobile */
+@media (max-width: 700px) {
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        background-color: white;
+        font-size: calc(16px + 0.3vw);
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(242, 242, 242);
+    }
+
+    .form {
+        background-color: white;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.131);
+        background: rgb(59,105,195);
+        background: linear-gradient(90deg, rgba(59,105,195,1) 0%, rgba(59,99,191,1) 5%, rgba(73,110,196,1) 11%, rgba(255,255,255,1) 11%, rgba(255,255,255,1) 89%, rgba(0,212,255,1) 89%);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 6fr;
+        border-radius: 5px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .right {
+        background-color: rgb(183, 219, 248);
+    }
+
+
+    .left>label {
+        user-select: none;
+        font-family: 'Mukta', sans-serif;
+        font-size: calc(20px + 0.6vw);
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    .left>.image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100px + 1vw);
+        height: calc(100px + 1vw);
+        border-radius: 50%;
+        background-color: rgb(49, 121, 215);
+    }
+
+    .left>.image>.icon {
+        user-select: none;
+        width: 80%;
+        height: 80%;
+    }
+
+    .left>.inputForm1 {
+        width: 80%;
+        height: 40px;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: 1px solid rgb(177, 177, 177);
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: calc(16px + 0.3vw);
+    }
+
+    .left>.inputForm1:focus {
+        outline: none;
+        border: 1px solid rgb(49, 121, 215);
+        transition: all 0.5s;
+        font-size: calc(16px + 0.3vw);
+    }
+
+    .left>.inputForm2 {
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        min-width: 200px;
+        width: 50%;
+        height: 50px;
+        max-width: 400px;
+        transition: all 0.5s;
+        color: black;
+        background-color: rgb(228, 228, 228);
+    }
+
+    .left>.inputForm2:hover {
+        cursor: pointer;
+        transition: all 0.5s;
+        color: white;
+        background-color: rgb(80, 139, 178);
+    }
+}

@@ -1,0 +1,38 @@
+<main>
+  <div class="content">
+    <div class="link" role="button" (click)="returnPage($event);">
+      <span>Regresar</span>
+    </div>
+    <div class="form">
+      <div class="header-content">
+        <h2>Crear nueva gráfica</h2>
+        <span>Bienvenido al asistente para crear gráficas, aquí usted podra dar de alta los gráficos que usted necesite para su sitio</span>
+      </div>
+      <div class="form-content" role="form">
+        <form [formGroup]="createChartForm">
+          <div class="form-section">
+            <label for="chartType">Título</label>
+            <span>¿Cuál es el nombre de la gráfica a crear?</span>
+            <input type="text" name="chartType" id="chartType" formControlName="title" placeholder="Escriba aqui...">
+          </div>
+          <div class="form-section">
+            <label for="chartType">Tipo de Gráfica</label>
+            <span>¿Qué tipo de gráfico desea generar?</span>
+            <input type="text" name="chartType" id="chartType" formControlName="chartType" placeholder="Escriba aqui...">
+          </div>
+          <div class="form-section">
+            <label for="chartType">Título</label>
+            <span>¿Cuál es el nombre de la gráfica a crear?</span>
+            <input type="text" name="chartType" id="chartType" formControlName="chartType" placeholder="Escriba aqui...">
+          </div>
+          <div class="form-section">
+            <label for="chartType">Descripción</label>
+            <span>Si desea poner algún comentario adicional, aquí lo puede realizar</span>
+            <input type="text" name="chartType" id="chartType" formControlName="chartType" placeholder="Escriba aqui...">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="banner"></div>
+</main>

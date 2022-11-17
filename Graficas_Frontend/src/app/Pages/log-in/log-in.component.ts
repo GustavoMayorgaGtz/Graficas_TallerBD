@@ -14,7 +14,7 @@ import { LoginService } from 'src/app/Servicios/Login/login.service';
 export class LogInComponent implements OnInit {
 
 
-  public form !: LoginFormBuild;
+  public form: LoginFormBuild;
   constructor(private builder: FormBuilder, private login: LoginService) {
     this.form = this.builder.group({
       username: new FormControl('', Validators.required),
@@ -31,7 +31,7 @@ export class LogInComponent implements OnInit {
     if (this.form.valid) {
       let username = this.form.get("username")?.value;
       let password = this.form.get("password")?.value;
-      
+
       this.login.Login({email:username, password}).subscribe((data) => {
         if(data.status == 200)
         {
@@ -39,14 +39,14 @@ export class LogInComponent implements OnInit {
             logged: String,
             status: Number
           }
-          let information = data as unknown as login;          
+          let information = data as unknown as login;
           if(information.logged)
           {
             window.location.href="/administrador";
           }else{
             alert("usuario o contraseña incorrecta")
           }
-    
+
         }
       })
     }

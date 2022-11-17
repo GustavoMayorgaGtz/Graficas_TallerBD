@@ -1,4 +1,5 @@
 import { AbstractControl, FormGroup } from "@angular/forms";
+import { ApexAxisChartSeries, ApexChart, ApexTitleSubtitle, ApexXAxis } from "ng-apexcharts/public_api";
 
 export interface StructDataTransport
 {
@@ -8,6 +9,13 @@ export interface StructDataTransport
 }
 
 export type StructData = Omit<StructDataTransport, "type">;
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  title: ApexTitleSubtitle;
+}
 
 export interface Usuario{
     ID_Usuario: number,
@@ -53,7 +61,7 @@ export interface CreateUser{
    password1: String,
    password2: String
 }
- 
+
 export interface CreateUserForm extends FormGroup
 {
     value: CreateUser,

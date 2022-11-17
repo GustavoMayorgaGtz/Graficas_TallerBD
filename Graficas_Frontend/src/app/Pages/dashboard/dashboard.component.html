@@ -1,0 +1,78 @@
+<div id="main">
+  <div class="left-nav">
+    <div class="img-container">
+      <img src="/assets/grafico.png" alt="Logo">
+    </div>
+    <div class="section-nav-left">
+      <h3>Menu</h3>
+      <div class="nav-option" role="navigation">
+        <ul>
+          <li role="button">Inicio</li>
+          <li role="button">Gráficas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <div id="right-nav">
+      <div class="nav-option top">
+        <ul>
+          <li role="button">Gráficas</li>
+        </ul>
+      </div>
+      <div class="misc-options">
+        <div class="input-container">
+          <input type="text" placeholder="Escribe para buscar...">
+        </div>
+        <div class="button-icon" (click)="handleOnConfig($event);">
+          <object data="/assets/gear-solid.svg" type=""></object>
+        </div>
+        <div class="button-icon">
+          <object data="/assets/bell-solid.svg" type=""></object>
+        </div>
+      </div>
+    </div>
+    <main role="main">
+      <div class="welcome-message">
+        <h1>Bienvenido de nuevo</h1>
+        <span>¿Que deseas hacer?</span>
+      </div>
+      <div class="gallery">
+        <div class="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [title]="chartOptions.title"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+        <div class="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [title]="chartOptions.title"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+        <div class="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [title]="chartOptions.title"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+        <div class="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [title]="chartOptions.title"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+

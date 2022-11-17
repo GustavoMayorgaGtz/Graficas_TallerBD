@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LogInComponent } from './Pages/log-in/log-in.component';
 import { AdministradorComponent } from './Pages/administrador/administrador.component';
 import { RegistroUsuarioComponent } from './Pages/registro-usuario/registro-usuario.component';
+import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -17,16 +19,17 @@ import { RegistroUsuarioComponent } from './Pages/registro-usuario/registro-usua
     LogInComponent,
     AdministradorComponent,
     AdministradorComponent,
-    RegistroUsuarioComponent
+    RegistroUsuarioComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule
   ],
-    
-    providers: [],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

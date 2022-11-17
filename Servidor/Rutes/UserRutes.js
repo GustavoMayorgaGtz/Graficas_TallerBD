@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 var mysql = require('msnodesqlv8');
-const connectionString = "server=GUSTAVO-MAYORGA\\SQLEXPRESS;Database=Graficas;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}";
+const connectionString = "server=CONTROLERACER3;Database=Graficas;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}"; //GUSTAVO-MAYORGA\\SQLEXPRESS
 
 
 router.post("/Login", (req, res) => {

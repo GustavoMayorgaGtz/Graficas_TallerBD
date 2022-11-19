@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { ApiFormGroup, connectionBDFormGroup } from 'src/app/Interfaces';
 
 @Component({
   selector: 'app-create-api',
@@ -11,7 +13,12 @@ export class CreateApiComponent implements OnInit {
   public menu : number = 0;
   public token :string = "BC214KDF21D:325DT:EWRTEWTR";
   public generatedURL !: String;
-  constructor() { }
+
+  public connectionBD !: connectionBDFormGroup;
+  public api !: ApiFormGroup;
+  constructor(private builder: FormBuilder) { 
+  
+  }
 
   ngOnInit(): void {
   }

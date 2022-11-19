@@ -10,7 +10,7 @@
             <div class="option" (click)="selectMenu(2)">Api</div>
         </div>
         <div class="api" *ngIf="menu == 2">
-            <div class="form">
+            <div class="form" [formGroup]="api">
 
                 <label class="label" for="servername">Conjunt Name</label>
                 <input type="text" class="text" name="conjuntname" placeholder="DataGraph1">
@@ -19,12 +19,12 @@
                 <br>
                 <div class="done" (click)="generateAPI()">Generate URL</div>
                 <br>
-                <label class="queryBlock">{{generatedURL}}</label>
+                <label class="queryBlock"><b>METHOD POST</b>{{generatedURL}}</label>
                 
             </div>
         </div>
         <div class="database" *ngIf="menu == 1">
-            <div class="form">
+            <div class="form" [formGroup]="connectionBD">
 
                 <label class="label" for="servername">ServerName</label>
                 <input type="text" class="text" name="servername" placeholder="GUSTAVO-MAYORGA\\SQLEXPRESS">

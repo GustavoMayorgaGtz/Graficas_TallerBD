@@ -201,4 +201,8 @@
     background-color: rgb(46, 46, 46);
     border: 2px solid rgb(194, 194, 194);
 }
+b{
+ color: white; 
+ margin-right: 10px;  
+}
 /*API*/

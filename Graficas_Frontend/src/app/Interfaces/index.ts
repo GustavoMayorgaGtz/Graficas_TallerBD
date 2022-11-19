@@ -64,4 +64,31 @@ export interface CreateUserForm extends FormGroup
     }
 }
 
+export interface ApiForm {
+    ConjuntName: String
+}
+export interface connectionBDForm{
+    ConjuntName: String
+    Authentication: String
+    ServerName: String
+    SQLQuery: String
+}
+
+export interface ApiFormGroup extends FormGroup{
+    values: ApiForm,
+    controls:{
+        ConjuntName: AbstractControl<String>
+    }
+}
+
+export interface connectionBDFormGroup extends FormGroup{
+    values: connectionBDForm,
+    controls:{
+        ConjuntName: AbstractControl<String>,
+    Authentication: AbstractControl<String>,
+    ServerName: AbstractControl<String>,
+    SQLQuery: AbstractControl<String>
+    }
+}
+
 export type Days = Number[];

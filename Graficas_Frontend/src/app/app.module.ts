@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LogInComponent } from './Pages/log-in/log-in.component';
 import { AdministradorComponent } from './Pages/administrador/administrador.component';
 import { RegistroUsuarioComponent } from './Pages/registro-usuario/registro-usuario.component';
+import { CreateApiComponent } from './Pages/create-api/create-api.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RegistroUsuarioComponent } from './Pages/registro-usuario/registro-usua
     LogInComponent,
     AdministradorComponent,
     AdministradorComponent,
-    RegistroUsuarioComponent
+    RegistroUsuarioComponent,
+    CreateApiComponent
   ],
   imports: [
     BrowserModule,

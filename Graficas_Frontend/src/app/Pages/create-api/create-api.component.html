@@ -1,0 +1,50 @@
+<div class="body">
+    <div class="left">
+        <div class="menu" *ngIf="menu == 0">
+            <div class="title">Conecta tu mundo</div>
+            <div class="descrip">Crea una nueva conexion para poder obtener los datos que quieras graficar, escoge una
+                de las dos opciones siguientes</div>
+            <br>
+            <div class="option" (click)="selectMenu(1)">Base de datos</div>
+            <br>
+            <div class="option" (click)="selectMenu(2)">Api</div>
+        </div>
+        <div class="api" *ngIf="menu == 2">
+            <div class="form">
+
+                <label class="label" for="servername">Conjunt Name</label>
+                <input type="text" class="text" name="conjuntname" placeholder="DataGraph1">
+                <br>
+                <label class="tokenBlock">Token: {{token}}</label>
+                <br>
+                <div class="done" (click)="generateAPI()">Generate URL</div>
+                <br>
+                <label class="queryBlock">{{generatedURL}}</label>
+                
+            </div>
+        </div>
+        <div class="database" *ngIf="menu == 1">
+            <div class="form">
+
+                <label class="label" for="servername">ServerName</label>
+                <input type="text" class="text" name="servername" placeholder="GUSTAVO-MAYORGA\\SQLEXPRESS">
+                <label class="label" for="servername">Conjunt Name</label>
+                <input type="text" class="text" name="conjuntname" placeholder="DataGraph1">
+                <br>
+                <label class="label" for="security">Authentication Type</label>
+                <select name="security" class="selectAuth">
+                    <option>Windows Authentication</option>
+                    <option>User and Password</option>
+                </select>
+                <br>
+                <label class="label" for="query">SQL Query</label>
+                <textarea name="query" class="query" placeholder="SELECT * FROM User WHERE id = 1"></textarea>
+                <br>
+                <div class="done">Done</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="right"> <img src={{urlImage}} class="image"> </div>
+    <div class="quit" *ngIf="menu == 1 || menu == 2" (click)="selectMenu(0)"><img src="./assets/eliminar.png" alt="back" class="image"></div>
+</div>

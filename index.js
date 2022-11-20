@@ -9,6 +9,8 @@ app.use(parser.urlencoded({extended: true}));
 
 const UserRute = require('./Servidor/Rutes/UserRutes');
 app.use("/User", UserRute);
+const ConjuntDataRute = require('./Servidor/Rutes/ConjuntDataRute');
+app.use("/ConjuntData", ConjuntDataRute);
 
 app.listen(3000, () => {
     console.log("Servidor ejecutandose en el puerto 3000. http://localhost:3000");

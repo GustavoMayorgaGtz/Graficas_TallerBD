@@ -16,7 +16,8 @@ router.post("/Login", (req, res) => {
                 let data = rows[0].ID_Usuario;
                 if (data >= 1 && data) {
                     console.log("inicio sesion")
-                    res.status(200).send({ "status": 200, "logged": true })
+
+                    res.status(200).send({ "status": 200, "logged": true ,"id":data})
                 }
             }else if(iterator > 0 && !rows[0])
             {

@@ -76,19 +76,24 @@ router.get('/getData', (req, res) => {
 });
 
 router.get('/setData', (req, res) => {
-   let token = req.params.token;
-   let data = req.params.data;
-   let ConjuntName = req.params.ConjuntName;
-   let ID_Usuario = req.params.ID_Usuario;
-
+   let token = req.query.token;
+   let data = req.query.data;
+   let ConjuntName = req.query.ConjuntName;
+   let ID_Usuario = req.query.ID_Usuario;
+  /* console.log(token)
+   console.log(data)
+   console.log(ConjuntName)
+   console.log(ID_Usuario)
+   console.log(req.query);*/
    if(token && data >= 0 && ConjuntName && ID_Usuario)
    {
     let query = `insert into Api values('${token}', ${ID_Usuario}, '${ConjuntName}', ${data})`;
     mysql.query(connectionString, query, (err, rows) => {
       if(err)
       {
-
+        console.log(err)
       }else{
+        console.log(rows)
         res.status(200).send({"status": 200, "message":"data logger"})
       }
     });

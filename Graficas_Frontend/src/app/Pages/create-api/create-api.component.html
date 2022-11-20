@@ -12,8 +12,8 @@
         <div class="api" *ngIf="menu == 2">
             <div class="form" [formGroup]="api">
 
-                <label class="label" for="servername">Conjunt Name</label>
-                <input type="text" class="text" name="conjuntname" placeholder="DataGraph1">
+                <label class="label" for="conjuntnameapi">Conjunt Name</label>
+                <input type="text" class="text" name="conjuntnameapi" placeholder="DataGraph1" formControlName="ConjuntNameApi">
                 <br>
                 <label class="tokenBlock">Token: {{token}}</label>
                 <br>
@@ -27,18 +27,18 @@
             <div class="form" [formGroup]="connectionBD">
 
                 <label class="label" for="servername">ServerName</label>
-                <input type="text" class="text" name="servername" placeholder="GUSTAVO-MAYORGA\\SQLEXPRESS">
+                <input type="text" class="text" name="servername" placeholder="GUSTAVO-MAYORGA\\SQLEXPRESS" formControlName="ServerName">
                 <label class="label" for="servername">Conjunt Name</label>
-                <input type="text" class="text" name="conjuntname" placeholder="DataGraph1">
+                <input type="text" class="text" name="conjuntname" placeholder="DataGraph1"  formControlName="ConjuntName">
                 <br>
                 <label class="label" for="security">Authentication Type</label>
-                <select name="security" class="selectAuth">
+                <select name="security" class="selectAuth" formControlName="Authentication">
                     <option>Windows Authentication</option>
                     <option>User and Password</option>
                 </select>
                 <br>
                 <label class="label" for="query">SQL Query</label>
-                <textarea name="query" class="query" placeholder="SELECT * FROM User WHERE id = 1"></textarea>
+                <textarea name="query" class="query" placeholder="SELECT * FROM User WHERE id = 1" formControlName="SQLQuery"></textarea>
                 <br>
                 <div class="done">Done</div>
             </div>

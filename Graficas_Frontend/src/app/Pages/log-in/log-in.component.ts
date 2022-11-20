@@ -35,13 +35,9 @@ export class LogInComponent implements OnInit {
       this.login.Login({email:username, password}).subscribe((data) => {
         if(data.status == 200)
         {
-          interface login{
-            logged: String,
-            status: Number
-          }
-          let information = data as unknown as login;          
-          if(information.logged)
+          if(data.logged)
           {
+            sessionStorage.setItem("id_user", ""+data.id)  
             window.location.href="/administrador";
           }else{
             alert("usuario o contraseña incorrecta")

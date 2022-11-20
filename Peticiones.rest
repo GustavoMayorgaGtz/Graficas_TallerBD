@@ -9,11 +9,13 @@
 # Get http://localhost:3000/User/FindAllUsers
 # Content-Type: application/json
 
-Post http://localhost:3000/User/CreateUser
-Content-Type: application/json
+# Post http://localhost:3000/User/CreateUser
+# Content-Type: application/json
 
-{
-  "name":"Gustavo Mayorga Gutierrez",
-  "email":"goglege2@gmail.com",
-  "password":"password123"
-}
+# {
+#   "name":"Gustavo Mayorga Gutierrez",
+#   "email":"goglege2@gmail.com",
+#   "password":"password123"
+# }
+
+get http://localhost:3000/ConjuntData/setData?token="BC214KDF21D:325DT:EWRTEWTR1668973499130"&data="56"&ID_Usuario=3&ConjuntName=Sensor1

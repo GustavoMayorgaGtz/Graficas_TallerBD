@@ -9,6 +9,12 @@ export interface StructDataTransport
 
 export type StructData = Omit<StructDataTransport, "type">;
 
+export interface Login{
+    status: number,
+    logged: boolean,
+    id: number
+}
+
 export interface Usuario{
     ID_Usuario: number,
     Correo: string,
@@ -65,7 +71,7 @@ export interface CreateUserForm extends FormGroup
 }
 
 export interface ApiForm {
-    ConjuntName: String
+    ConjuntNameApi: String
 }
 export interface connectionBDForm{
     ConjuntName: String
@@ -77,7 +83,7 @@ export interface connectionBDForm{
 export interface ApiFormGroup extends FormGroup{
     values: ApiForm,
     controls:{
-        ConjuntName: AbstractControl<String>
+        ConjuntNameApi: AbstractControl<String>
     }
 }
 
@@ -85,9 +91,9 @@ export interface connectionBDFormGroup extends FormGroup{
     values: connectionBDForm,
     controls:{
         ConjuntName: AbstractControl<String>,
-    Authentication: AbstractControl<String>,
-    ServerName: AbstractControl<String>,
-    SQLQuery: AbstractControl<String>
+        Authentication: AbstractControl<String>,
+        ServerName: AbstractControl<String>,
+        SQLQuery: AbstractControl<String>
     }
 }
 

@@ -31,12 +31,14 @@ router.post('/createConnectionBD', (req, res) => {
 
     if(ServerName && ID_Usuario && ConjuntName && SQLQuery)
     {
+      let query = `insert into ConnectionBD values(${ID_Usuario}, '${ServerName}', '${ConjuntName}', '${SQLQuery}')`;
         mysql.query(connectionString, query, (err, rows) => {
          if(err)
          {
           console.log(err);
          }else{
           console.log(rows);
+          res.status(200).send({"status": 200, "message":true})
          }
 
         });
@@ -69,8 +71,19 @@ router.post('/getDataConnectionBD', (req, res) => {
 })
 
 router.get('/getConjuntDataUser', (req, res) => {
-
+  let id = req.query.ID_Usuario;
+  let query = `select distinct ConjuntName from Api where ID_Usuario = ${id};`;
+  mysql.query(connectionString, query, (err, rows) => {
+    if(err)
+    {
+      console.log(err)
+    }else{
+      console.log(rows)
+      res.status(200).send({"status": 200, "message":rows})
+    }
+  });
 });
+
 router.get('/getData', (req, res) => {
 
 });

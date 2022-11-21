@@ -1,6 +1,8 @@
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { ApiFormGroup, connectionBDFormGroup } from 'src/app/Interfaces';
+import { ConjuntDataService } from 'src/app/Servicios/conjunt-data.service';
 
 @Component({
   selector: 'app-create-api',
@@ -17,7 +19,7 @@ export class CreateApiComponent implements OnInit {
   public connectionBD !: connectionBDFormGroup;
   public api !: ApiFormGroup;
 
-  constructor(private builder: FormBuilder) {
+  constructor(private builder: FormBuilder, private conjuntDataService: ConjuntDataService) {
 
   }
 
@@ -56,6 +58,40 @@ export class CreateApiComponent implements OnInit {
       }
 
     }
+  }
+
+  createConnectionDB()
+  {
+
+    if(this.connectionBD.valid)
+    {
+      let ID_Usuario = sessionStorage.getItem("id_user");
+      let ServerName = this.connectionBD.controls.ServerName.value;
+      let SQLQuery = this.connectionBD.controls.SQLQuery.value;
+      let ConjuntName= this.connectionBD.controls.ConjuntName.value;
+      if(ID_Usuario)
+      {
+        this.conjuntDataService.createConnectionData({ServerName, ID_Usuario, ConjuntName, SQLQuery}).subscribe((data) => {
+           
+           if(data.status == 200 && data.message)
+           {
+             alert("Conexion Creada")
+             this.connectionBD.controls.ConjuntName.reset();
+             this.connectionBD.controls.ServerName.reset();
+             this.connectionBD.controls.SQLQuery.reset();
+           }
+        }, (err) => {
+          alert("error al crear conexion a base de datos");
+        })
+  
+      }else{
+        window.location.href = "/"
+      }
+    }else{
+      alert("Ingresa todos los datos");
+
+    }
+    
   }
 
   generateAPI() {

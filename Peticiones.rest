@@ -18,4 +18,7 @@
 #   "password":"password123"
 # }
 
-get http://localhost:3000/ConjuntData/setData?token="BC214KDF21D:325DT:EWRTEWTR1668973499130"&data="56"&ID_Usuario=3&ConjuntName=Sensor1
+#get http://localhost:3000/ConjuntData/setData?token="BC214KDF21D:325DT:EWRTEWTR1668973499130"&data="56"&ID_Usuario=3&ConjuntName=Sensor1
+
+
+GET http://localhost:3000/ConjuntData/getConjuntDataUser

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdministradorComponent } from './Pages/administrador/administrador.component';
 import { CreateChartComponent } from './Pages/create-chart/create-chart.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { CreateApiComponent } from './Pages/create-api/create-api.component';
 import { LogInComponent } from './Pages/log-in/log-in.component';
 import { RegistroUsuarioComponent } from './Pages/registro-usuario/registro-usuario.component';
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: "administrador", component: AdministradorComponent},
   {path: "registrar", component: RegistroUsuarioComponent},
   {path: "dashboard", component: DashboardComponent},
-  {path: "create", component: CreateChartComponent}
+  {path: "create", component: CreateChartComponent},
+  {path: "conexion", component: CreateApiComponent},
 ];
 
 @NgModule({

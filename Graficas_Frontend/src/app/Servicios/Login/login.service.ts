@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, EventEmitter  } from '@angular/core';
-import { StructData} from 'src/app/Interfaces';
+import { Login, StructData} from 'src/app/Interfaces';
 import { environment } from 'src/environments/environment';
 
 
@@ -12,6 +12,6 @@ export class LoginService {
 
   Login(body: Object)
   {
-    return this.http.post<StructData>(environment.server+"/User/Login", body);
+    return this.http.post<Login>(environment.server+"/User/Login", body);
   }
 }

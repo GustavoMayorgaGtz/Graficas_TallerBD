@@ -12,6 +12,7 @@ import { AdministradorComponent } from './Pages/administrador/administrador.comp
 import { RegistroUsuarioComponent } from './Pages/registro-usuario/registro-usuario.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { CreateChartComponent } from './Pages/create-chart/create-chart.component';
+import { CreateApiComponent } from './Pages/create-api/create-api.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CreateChartComponent } from './Pages/create-chart/create-chart.componen
     AdministradorComponent,
     RegistroUsuarioComponent,
     DashboardComponent,
-    CreateChartComponent
+    CreateChartComponent,
+    CreateApiComponent
   ],
   imports: [
     BrowserModule,

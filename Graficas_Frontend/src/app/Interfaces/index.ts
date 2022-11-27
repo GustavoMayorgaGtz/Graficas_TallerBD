@@ -16,6 +16,11 @@ export type ChartOptions = {
   xaxis: ApexXAxis;
   title: ApexTitleSubtitle;
 }
+export interface Login{
+    status: number,
+    logged: boolean,
+    id: number
+}
 
 export interface Usuario{
     ID_Usuario: number,
@@ -99,6 +104,33 @@ export interface CreateChartDTO {
   description?: string;
 }
 
-export type Days = Number[];
 
 export type Charts = ChartOptions[];
+export interface ApiForm {
+    ConjuntNameApi: String
+}
+export interface connectionBDForm{
+    ConjuntName: String
+    Authentication: String
+    ServerName: String
+    SQLQuery: String
+}
+
+export interface ApiFormGroup extends FormGroup{
+    values: ApiForm,
+    controls:{
+        ConjuntNameApi: AbstractControl<String>
+    }
+}
+
+export interface connectionBDFormGroup extends FormGroup{
+    values: connectionBDForm,
+    controls:{
+        ConjuntName: AbstractControl<String>,
+        Authentication: AbstractControl<String>,
+        ServerName: AbstractControl<String>,
+        SQLQuery: AbstractControl<String>
+    }
+}
+
+export type Days = Number[];

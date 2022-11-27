@@ -1,0 +1,238 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.left-nav {
+  gap: 20px;
+  padding: 10px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 0;
+  background-color: #001C29;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 0px 4px 2px rgba(0, 0, 0, 0.15);
+  height: 100vh;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.img-container > img {
+  width: 50px;
+}
+
+.section-nav-left {
+  gap: 20px;
+  display: flex;
+  color: #F5FCFF;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+}
+
+.left-nav .section-nav-left {
+  width: 100%;
+}
+
+.nav-option:not(.top) {
+  width: 100%;
+}
+
+.nav-option ul {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+  flex-direction: column;
+  color: #F5FCFF;
+  list-style-type: none;
+}
+
+#rifht-nav .nav-option ul {
+  width: fit-content !important;
+}
+
+.nav-option ul li {
+  padding: 5px;
+  width: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out;
+  font-size: 14px;
+}
+
+.nav-option ul li:hover {
+  transition: background 0.2s ease-in;
+  background-color: #005980;
+}
+
+#content {
+  width: 100%;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#right-nav {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #0094D9;
+  justify-content: space-between;
+}
+
+.misc-options {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.button-icon {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.button-icon:hover {
+  transition: background 0.2s ease-in;
+  background-color: #005980;
+}
+
+.input-container input {
+  width: 200px;
+  padding: 5px;
+  color: #4D5E66;
+  border-radius: 5px;
+  word-spacing: 0.01em;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.input-container input::placeholder {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.input-container input:focus {
+  outline: 2px solid black;
+}
+
+.welcome-message {
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.welcome-message h1 {
+  color: #000E14;
+  word-spacing: 0.01em;
+  letter-spacing: 0.01em;
+}
+
+.welcome-message span {
+  font-size: 18px;
+  word-spacing: 0.01em;
+  word-break: keep-all;
+  word-wrap: break-word;
+  letter-spacing: normal;
+  color: #69818C;
+}
+
+main {
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery {
+  width: 100%;
+  gap: 20px;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 350px);
+}
+
+.chart {
+  /* width: 400px; */
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+.not-found {
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.not-found span {
+  font-size: 16px;
+  color: #4D5E66;
+  font-weight: 600;
+}
+
+.not-found a {
+  color: #005980;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.not-found a:visited {
+  color: #005980;
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+  color: #001C29;
+}
+
+@media screen and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .left-nav {
+    display: none;
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 100%);
+  }
+}

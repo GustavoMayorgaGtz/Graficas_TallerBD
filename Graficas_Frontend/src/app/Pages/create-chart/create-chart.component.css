@@ -1,0 +1,166 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.content {
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.banner {
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  background-color: #0094D9;
+}
+
+.link {
+  font-size: 14px;
+  color: #4D5E66;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.link:hover {
+  transition: background 0.2s ease-in;
+  background-color: #F5FCFF;
+}
+
+.form {
+  gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form .header-content h2 {
+  color: #000E14;
+  letter-spacing: 0.01em;
+}
+
+.header-content {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.header-content span {
+  font-size: 14px;
+  color: #4D5E66;
+  word-spacing: normal;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.form-content form {
+  gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form-section {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.form-section label {
+  font-size: 18px;
+  color: #222526;
+  font-weight: 600;
+}
+
+.form-section span {
+  font-size: 14px;
+  color: #4D5E66;
+  letter-spacing: 0.01em;
+  word-spacing: 0.01em;
+}
+
+.form-section input:not(input[type='submit']), .form-section select {
+  width: 300px;
+  color: #4D5E66;
+  padding: 5px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: background 0.01s ease-in-out;
+}
+
+.form-section input:hover {
+  transition: background 0.01s ease-in;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form-section input:focus {
+  transition: background 0.01s ease-in;
+  background-color: white;
+}
+
+.form-section input::placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.form-section input[type='submit'] {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #0094D9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background 0.2s ease-in-out;
+}
+
+.form-section input[type='submit']:hover {
+  transition: background 0.2s ease-in;
+  background-color: #002C40;
+}
+
+.form {
+  gap: 20px;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal-wrapper {
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}

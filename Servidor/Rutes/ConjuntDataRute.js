@@ -2,27 +2,6 @@ const express = require('express');
 const router = express.Router();
 var mysql = require('msnodesqlv8');
 const connectionString = "server=GUSTAVO-MAYORGA\\SQLEXPRESS;Database=Graficas;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}";
-// router.post('/createApi', (req, res) => {
-//     let token = req.body.token;
-//     let ID_Usuario = req.body.ID_Usuario;
-//     let ConjuntName = req.body.ConjuntName;
-//     if(token && ID_Usuario && ConjuntName)
-//     {
-//         mysql.query(connectionString, query, (err, rows) => {
-//          if(err)
-//          {
-//           console.log(err);
-//          }else{
-//           console.log(rows);
-//          }
-
-//         });
-//     }else{
-//         res.status(400).send({"status":400,"message":"Bad request"});
-//     }
-
-// })
-
 router.post('/createConnectionBD', (req, res) => {
     let ServerName= req.body.ServerName;
     let ID_Usuario = req.body.ID_Usuario;

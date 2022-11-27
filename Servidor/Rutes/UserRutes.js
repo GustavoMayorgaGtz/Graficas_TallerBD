@@ -36,9 +36,11 @@ router.post("/DeleteUser", (req, res) => {
     let password = req.body.password;
     if (email && password) {
         let query = `exec EliminaUsuario '${email}', '${password}'`;
+        console.log(query)
         let iterator = 0;
 
         mysql.query(connectionString, query, (err, rows) => {
+            console.log(rows)
             if (iterator > 0 && rows[0]) {
                 let data = rows[0].ID_Usuario;
                 if (data >= 1 && data) {

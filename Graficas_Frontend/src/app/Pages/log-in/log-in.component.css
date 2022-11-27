@@ -2,7 +2,142 @@
 /*font-family: 'PT Sans', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 /*font-family: 'Mukta', sans-serif;*/
+.body{
+    background-color: rgb(226, 226, 226);
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.barAnimation1
+{
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation: 1s slideUp;
+}
 
+.barAnimation2
+{
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation: 3s slideUp;
+}
+/* Mobile */
+@media (max-width: 700px)
+{
+   .bar2{ display: none;}
+   .bar4{ display: none;}
+   .bar7{ display: none;}
+   .bar10{ display: none;}
+}
+
+/* Desktop */
+@media(min-width:700px){
+    .bar2{ display: flex;}
+    .bar4{ display: flex;}
+    .bar7{ display: flex;}
+    .bar10{ display: flex;}
+}
+
+.bar1{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 10%;
+    height: 300px;
+    background-color: rgb(225, 39, 39);
+}
+
+.bar2{
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    width: 10%;
+    height: 350px;
+    background-color: rgb(22, 165, 222);
+}
+
+.bar3{
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    width: 4%;
+    height: 400px;
+    background-color: rgb(231, 192, 21);
+}
+
+.bar4{
+    position: absolute;
+    bottom: 0px;
+    left: 24%;
+    width: 2%;
+    height: 200px;
+    background-color: #e11c5e;
+}
+.bar5{
+    position: absolute;
+    bottom: 0px;
+    left: 26%;
+    width: 10%;
+    height: 360px;
+    background-color: #67de17;
+}
+
+.bar6{
+    position: absolute;
+    bottom: 0px;
+    left: 36%;
+    width: 15%;
+    height:390px;
+    background-color: #a81ede;
+}
+
+.bar7{
+    position: absolute;
+    bottom: 0px;
+    left: 51%;
+    width: 10%;
+    height: 260px;
+    background-color: #07449e;
+}
+.bar8{
+    position: absolute;
+    bottom: 0px;
+    left: 61%;
+    width: 4%;
+    height: 310px;
+    background-color: #dd5119;
+}
+.bar9{
+    position: absolute;
+    bottom: 0px;
+    left: 65%;
+    width: 10%;
+    height: 330px;
+    background-color: #d8c410;
+}
+.bar10{
+    position: absolute;
+    bottom: 0px;
+    left: 75%;
+    width: 15%;
+    height: 280px;
+    background-color: #11d62b;
+}
+.bar11{
+    position: absolute;
+    bottom: 0px;
+    left: 90%;
+    width: 10%;
+    height: 350px;
+    background-color: #08a0c6;
+}
+@keyframes slideUp{
+    0%{ transform:  translateY(100%); opacity: 0;}
+    100%{ transform:  translateY(0%); opacity: 1;}
+}
 
 
 
@@ -52,6 +187,7 @@
         display: grid;
         grid-template-columns: 6fr;
         border-radius: 5px;
+        z-index: 100;
     }
 
     .left {
@@ -163,6 +299,7 @@
         display: grid;
         grid-template-columns: 6fr;
         border-radius: 5px;
+        z-index: 100;
     }
 
     .left {

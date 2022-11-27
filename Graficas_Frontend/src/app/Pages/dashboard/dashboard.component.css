@@ -190,6 +190,38 @@ main {
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
 }
 
+.not-found {
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.not-found span {
+  font-size: 16px;
+  color: #4D5E66;
+  font-weight: 600;
+}
+
+.not-found a {
+  color: #005980;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.not-found a:visited {
+  color: #005980;
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+  color: #001C29;
+}
+
 @media screen and (max-width: 1200px) {
   .gallery {
     grid-template-columns: repeat(2, 300px);

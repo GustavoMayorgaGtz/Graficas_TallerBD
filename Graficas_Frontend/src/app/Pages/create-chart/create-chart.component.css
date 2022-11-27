@@ -2,6 +2,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .content {
   gap: 20px;
   width: 100%;
@@ -96,7 +104,7 @@
   word-spacing: 0.01em;
 }
 
-.form-section input {
+.form-section input:not(input[type='submit']), .form-section select {
   width: 300px;
   color: #4D5E66;
   padding: 5px 10px;
@@ -118,4 +126,41 @@
 
 .form-section input::placeholder {
   color: rgba(0, 0, 0, 0.1);
+}
+
+.form-section input[type='submit'] {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #0094D9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background 0.2s ease-in-out;
+}
+
+.form-section input[type='submit']:hover {
+  transition: background 0.2s ease-in;
+  background-color: #002C40;
+}
+
+.form {
+  gap: 20px;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal-wrapper {
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
 }

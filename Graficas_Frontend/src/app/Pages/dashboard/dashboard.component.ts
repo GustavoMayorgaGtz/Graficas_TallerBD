@@ -1,19 +1,23 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartComponent } from 'ng-apexcharts/public_api';
-import { ChartOptions } from 'src/app/Interfaces';
+import { ChartOptions, Charts } from 'src/app/Interfaces';
 import { Router } from '@angular/router';
+import { ChartService } from 'src/app/Servicios/Chart/chart.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   @ViewChild('chart') public chart!: ChartComponent;
+
   public chartOptions: ChartOptions;
+  public availableCharts: Charts;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private chartService: ChartService,
   ) {
     this.chartOptions = {
       series: [
@@ -35,9 +39,20 @@ export class DashboardComponent {
     };
   }
 
+  ngOnInit(): void {
+    this.chartService.getCharts().subscribe((response) => {
+      if (response.length === 0) return console.warn("No data available");
+      this.availableCharts = response;
+    });
+  }
+
   handleOnConfig(e: MouseEvent): void {
     e.preventDefault();
     this.router.navigateByUrl("/administrador");
+  }
+
+  handleOnChartClick(e: MouseEvent, idx: number): void {
+
   }
 
 }

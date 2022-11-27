@@ -1,5 +1,5 @@
 import { AbstractControl, FormGroup } from "@angular/forms";
-import { ApexAxisChartSeries, ApexChart, ApexTitleSubtitle, ApexXAxis } from "ng-apexcharts/public_api";
+import { ApexAxisChartSeries, ApexChart, ApexTitleSubtitle, ApexXAxis, ChartType } from "ng-apexcharts/public_api";
 
 export interface StructDataTransport
 {
@@ -93,4 +93,12 @@ export interface ChartFormGroup extends FormGroup {
   }
 }
 
+export interface CreateChartDTO {
+  chartType: ChartType,
+  title: string;
+  description?: string;
+}
+
 export type Days = Number[];
+
+export type Charts = ChartOptions[];

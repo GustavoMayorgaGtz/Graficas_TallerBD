@@ -37,8 +37,16 @@
         <h1>Bienvenido de nuevo</h1>
         <span>¿Que deseas hacer?</span>
       </div>
-      <div class="gallery">
-        <div class="chart">
+      <div class="gallery" *ngIf="availableCharts.length !== 0">
+        <div class="chart" *ngFor="let chart of availableCharts; index as i">
+          <apx-chart
+            [series]="chart.series"
+            [chart]="chart.chart"
+            [title]="chart.title"
+            [xaxis]="chart.xaxis"
+          ></apx-chart>
+        </div>
+        <!-- <div class="chart">
           <apx-chart
             [series]="chartOptions.series"
             [chart]="chartOptions.chart"
@@ -61,15 +69,12 @@
             [title]="chartOptions.title"
             [xaxis]="chartOptions.xaxis"
           ></apx-chart>
-        </div>
-        <div class="chart">
-          <apx-chart
-            [series]="chartOptions.series"
-            [chart]="chartOptions.chart"
-            [title]="chartOptions.title"
-            [xaxis]="chartOptions.xaxis"
-          ></apx-chart>
-        </div>
+        </div> -->
+      </div>
+      <div class="not-found">
+        <img src="/assets/notFound.svg" alt="Not founded">
+        <span>Lo sentimos, no hemos econtrado ninguna gráfica</span>
+        <a routerLink="/create">Crea una ahora mismo</a>
       </div>
     </main>
   </div>

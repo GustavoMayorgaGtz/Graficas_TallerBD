@@ -78,28 +78,26 @@ export interface CreateUserForm extends FormGroup
 }
 
 export interface CreateChart {
-  userId: number;
   chartType: string;
   title: string;
   dataSet: string;
-  chartColor: string;
   description?: string;
 }
 
 export interface ChartFormGroup extends FormGroup {
   value: CreateChart;
   controls: {
-    userId: AbstractControl<number>;
     chartType: AbstractControl<string>;
     title: AbstractControl<string>;
     dataSet: AbstractControl<string>;
-    chartColor: AbstractControl<string>;
     description: AbstractControl<string | undefined>;
   }
 }
 
 export interface CreateChartDTO {
+  ID_Usuario: string
   chartType: ChartType,
+  dataSet:string;
   title: string;
   description?: string;
 }

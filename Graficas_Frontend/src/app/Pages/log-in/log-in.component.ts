@@ -38,7 +38,7 @@ export class LogInComponent implements OnInit {
           if(data.logged)
           {
             sessionStorage.setItem("id_user", ""+data.id)
-            window.location.href="/administrador";
+            window.location.href="/create";
           }else{
             alert("usuario o contraseña incorrecta")
           }

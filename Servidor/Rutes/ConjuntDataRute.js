@@ -51,7 +51,9 @@ router.post('/getDataConnectionBD', (req, res) => {
 
 router.get('/getConjuntDataUser', (req, res) => {
   let id = req.query.ID_Usuario;
+
   let query = `select distinct ConjuntName from Api where ID_Usuario = ${id};`;
+  console.log(query)
   mysql.query(connectionString, query, (err, rows) => {
     if(err)
     {
@@ -79,7 +81,7 @@ router.get('/setData', (req, res) => {
    console.log(req.query);*/
    if(token && data >= 0 && ConjuntName && ID_Usuario)
    {
-    let query = `insert into Api values('${token}', ${ID_Usuario}, '${ConjuntName}', ${data})`;
+    let query = `insert into Api values('${token}', ${ID_Usuario},GETDATE(),'${ConjuntName}', ${data})`;
     mysql.query(connectionString, query, (err, rows) => {
       if(err)
       {

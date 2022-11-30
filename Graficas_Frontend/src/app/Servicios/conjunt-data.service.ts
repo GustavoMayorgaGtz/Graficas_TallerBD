@@ -14,4 +14,11 @@ export class ConjuntDataService {
   {
     return this.http.post<StructData>(environment.server+"/ConjuntData/createConnectionBD", body);
   }
+
+  getConjuntName(id:String)
+  {
+   
+    return this.http.get<StructData>(environment.server+"/ConjuntData/getConjuntDataUser?ID_Usuario="+id )
+   
+  }
 }

@@ -1,30 +1,33 @@
 const express = require("express");
 const router = express.Router();
 var mysql = require('msnodesqlv8');
-const connectionString = "server=CONTROLERACER3;Database=Graficas;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}"; //GUSTAVO-MAYORGA\\SQLEXPRESS
+const connectionString = "server=GUSTAVO-MAYORGA\\SQLEXPRESS;Database=Graficas;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}"; //GUSTAVO-MAYORGA\\SQLEXPRESS
 
 
 router.post("/Login", (req, res) => {
     let email = req.body.email;
     let password = req.body.password;
+    console.log(req.body)
+
+    console.log("peticion")
     if (email && password) {
         let query = `exec InicioSesion '${email}', '${password}'`;
-        let iterator = 0;
 
         mysql.query(connectionString, query, (err, rows) => {
-            if (iterator > 0 && rows[0]) {
-                let data = rows[0].ID_Usuario;
-                if (data >= 1 && data) {
-                    console.log("inicio sesion")
-
-                    res.status(200).send({ "status": 200, "logged": true ,"id":data})
-                }
-            }else if(iterator > 0 && !rows[0])
+            let valor = rows[0]
+            
+            if(valor)
             {
-                console.log("No inicio sesion")
-                res.status(200).send({ "status": 200, "logged": false })
+                console.log(rows)
+                if(valor['Column0'] == "nolog")
+                {
+                    res.status(200).send({ "status": 200, "logged":false })
+                }else
+                {
+                    res.status(200).send({ "status": 200, "logged": true,"id":valor.Column0 })        
+                }
             }
-            iterator++;
+           
         });
     } else {
         res.status(400).send({ "status": 400, "logged": false })

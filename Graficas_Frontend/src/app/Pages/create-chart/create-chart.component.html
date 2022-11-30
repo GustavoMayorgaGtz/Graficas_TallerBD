@@ -37,6 +37,18 @@
               </select>
             </div>
             <div class="form-section">
+              <label for="dataSet">Conjunto de datos</label>
+              <span>Selecciona los datos que desea graficar</span>
+              <select
+                name="dataSet"
+                id="dataSet"
+                formControlName="dataSet" 
+                #dataSet
+                >
+          <option *ngFor="let name of listConjuntNames" >{{name}}</option>
+              </select>
+            </div>
+            <div class="form-section">
               <label for="description">Descripción</label>
               <span>Si desea poner algún comentario adicional, aquí lo puede realizar</span>
               <input type="text" name="description" id="description" formControlName="description" placeholder="Escriba aqui...">

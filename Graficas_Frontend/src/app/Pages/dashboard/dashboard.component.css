@@ -177,13 +177,13 @@ main {
 .gallery {
   width: 100%;
   gap: 20px;
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(3, 350px);
+  display:flex;
+  justify-content: center;
 }
 
 .chart {
   /* width: 400px; */
+  margin: 10px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.15);

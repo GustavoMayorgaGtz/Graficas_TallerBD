@@ -14,8 +14,8 @@ export class ChartService {
 
   constructor(private http: HttpClient) { }
 
-  public getCharts(): Observable<Charts> {
-    return this.http.get<Charts>(this.url)
+  getCharts(data:Object){
+    return this.http.post<Charts>(environment.server+"/Graph/getGraphsUser", data)
   }
 
   public createChart(data: CreateChartDTO){

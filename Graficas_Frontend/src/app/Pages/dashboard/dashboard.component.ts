@@ -34,16 +34,19 @@ export class DashboardComponent implements OnInit {
         text: "My First Angular Chart"
       },
       xaxis: {
-        categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"]
       }
     };
   }
 
   ngOnInit(): void {
-    this.chartService.getCharts().subscribe((response) => {
-      if (response.length === 0) return console.warn("No data available");
-      this.availableCharts = response;
-    });
+    let id = sessionStorage.getItem("id_user");
+    if (id && Number.isInteger(parseInt(id))) {
+      console.log(id)
+      this.chartService.getCharts({ID_Usuario: id}).subscribe((response) => {
+        this.availableCharts = response;
+      });
+    }
   }
 
   handleOnConfig(e: MouseEvent): void {
